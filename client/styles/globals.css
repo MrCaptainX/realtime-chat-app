@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  line-height:1.5 !important;
+  background-color:#282b34;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.chat-container {
+  width:400px;
+}
+
+
+.message-container {
+  height:500px;
+  max-height:500px;
+  overflow:auto;
+  display: flex;
+  overflow-y: auto;
+  align-content: flex-start;
+  width: 100%;
+  flex-direction: column;
+}
+
+.message {
+  padding-left: 0.5rem;
+  max-width: 220px;
+  margin-left: 0px;
+}
+
+
+.message p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  border-radius: 0px 10px 10px 10px;
+  padding: 1rem;
+}
+
+
+.message span {
+  color: #b4b6be;
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+  font-weight: 200;
+}
+
+
+.mess-right {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  padding-right: 0.5rem;
+  margin-right: 0px;
+  max-width: 220px;
+}
+
+.admin {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  margin-right: auto;
+  max-width: 220px;
+}
+
+.admin p {
+   text-align: center;
+   color:black;
+   padding:0.3rem;
+   border-radius: 0;
+}
+
+.mess-right p {
+    text-align: end;
+    color: white;
+    border-radius: 10px 0px 10px 10px;
+}
+  
+.mess-right span {
+    padding-left: 0rem;
+    width: 100%;
+    padding-right: 0.5rem;
+    text-align: end;
+}
+
+
+
+.message-input {
+  padding:10px;
+  width:80%;
+}
+
+.send-btn {
+  width:20%;
+}
