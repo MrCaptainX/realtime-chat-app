@@ -81,11 +81,10 @@ const Chat = (props) => {
              <div className='w-full bg-white border-t border-pink-500'>
                 <div className='w-full flex'>
                 <input
-                   className="input"
                    type="text"
                    placeholder="Type a message..."
                    value={message}
-                   className='message-input focus:outline-none hover:border-t focus:border-pink-600 text-black'
+                   className='input message-input focus:outline-none hover:border-t focus:border-pink-600 text-black'
                    onChange={({ target: { value } }) => setMessage(value)}
                    onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
                 />
