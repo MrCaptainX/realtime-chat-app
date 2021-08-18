@@ -57,18 +57,18 @@ const Chat = (props) => {
              <div className="message-container py-3 bg-white">
         
               {
-                messages.map((message) => {
+                messages.map((message,i) => {
                    return message.username === 'admin' ? (
-                       <div key={message.id} className='message admin my-4'>
+                       <div key={i} className='message admin my-4'>
                           <p className="bg-gray-300">{message.text}</p>
                        </div>
                    ) : ( message.username === name ? (
-                       <div key={message.id} className='message mess-right'>
+                       <div key={i} className='message mess-right'>
                           <p className="bg-red-400">{message.text}</p>
                           <span>{message.username}</span>
                        </div>
                     ) : (
-                      <div key={message.id} className='message'>
+                      <div key={i} className='message'>
                         <p className="bg-green-400">{message.text}</p>
                         <span>{message.username}</span>
                       </div>
@@ -101,8 +101,8 @@ const Chat = (props) => {
                 <h1 className="text-white text-2xl mb-5">Members</h1>
                 <ul className="list-none text-white">
                    {
-                     users.map((user) => (
-                        <li className="flex items-center space-x-2">
+                     users.map((user,i) => (
+                        <li key={i} className="flex items-center space-x-2">
                            <span className='w-2 h-2 bg-green-300 rounded-full'></span>
                            <span>{user.name}</span>
                         </li>
