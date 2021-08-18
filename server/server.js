@@ -70,7 +70,7 @@ io.on('connection', (socket) => {
                 console.log('disconected')
                 const removedUser = removeUser(socket.id);
                 if(removedUser) {
-                    io.to(removedUser.room).emit('message',{
+                    socket.broadcast.to('message',{
                         userId:removedUser.id,
                         username:"admin"
                         ,
@@ -78,7 +78,7 @@ io.on('connection', (socket) => {
                     })
                     io.to(removedUser.room).emit('users',getAllUsers())
                 }
-            })
+            });
 });
 
 io.on("connect_error", (err) => {

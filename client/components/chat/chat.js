@@ -6,22 +6,20 @@ import { useRouter } from 'next/router'
 
 const Chat = (props) => {
     const router = useRouter();
-    const [messages,setMessages] = useState([])
-    const [users,setUsers] = useState([])
+    const [messages,setMessages] = useState([]);
+    const [users,setUsers] = useState([]);
     const [message, setMessage] = useState('');
     const { channel , name } = router.query;
     const socket = props.socket;
   
   
-     
-
      useEffect(() => {
       if(!channel || !name) {
         router.push('/')
       }
- 
+
        socket.emit('joinRoom',{name , channel})
-     },[channel,name])
+     },[channel,name]);
 
 
      useEffect(() => {
@@ -32,6 +30,7 @@ const Chat = (props) => {
       socket.on("users", (users) => {
         setUsers(users);
       });
+
      },[]);
     
  
