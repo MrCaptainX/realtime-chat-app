@@ -70,13 +70,13 @@ io.on('connection', (socket) => {
                 console.log('disconected')
                 const removedUser = removeUser(socket.id);
                 if(removedUser) {
-                    socket.broadcast.to('message',{
+                    io.to(reomvedUser.room).emit('message',{
                         userId:removedUser.id,
                         username:"admin"
                         ,
                         text:`${removedUser.name} has been disconnect from room`
                     })
-                    io.to(removedUser.room).emit('users',getAllUsers())
+                    io.to(removedUser.room).emit('users',getAllUsers(removedUser.room))
                 }
             });
 });
