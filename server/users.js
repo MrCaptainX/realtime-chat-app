@@ -18,7 +18,7 @@ const getCurrentUser = (id) => {
     return users.find(user => user.id === id);
 }
 
-const getAllUsers = () => {
+const getAllUsers = (room) => {
     return users;
 }
 
