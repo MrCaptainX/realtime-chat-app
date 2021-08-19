@@ -19,7 +19,7 @@ const getCurrentUser = (id) => {
 }
 
 const getAllUsers = (room) => {
-    return users;
+    return users.filter(user => user.room === room);
 }
 
 
