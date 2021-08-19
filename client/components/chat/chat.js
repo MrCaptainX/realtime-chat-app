@@ -18,7 +18,7 @@ const Chat = (props) => {
         router.push('/')
       }
 
-       socket.emit('joinRoom',{name , channel})
+      if(!users.find((user) => user.name === name)) {socket.emit('joinRoom',{name , channel}) }
      },[channel,name]);
 
 
