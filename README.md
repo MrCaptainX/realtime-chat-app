@@ -3,9 +3,11 @@ simple realtime chat room with socket.io and next.js
 
 ## usage
 fist clone this project then
-```npm install
+```
+npm install
 ```
 
 ## start
-```npm run dev
+```
+npm run dev
 ```
